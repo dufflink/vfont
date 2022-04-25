@@ -8,12 +8,21 @@
 import UIKit
 import VFont
 
-class FontRow: UITableViewCell {
+final class FontRow: UITableViewCell {
+    
+    static let id = "FontRow"
     
     @IBOutlet private weak var cardView: UIView!
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var stackView: UIStackView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        stackView.arrangedSubviews.forEach {
+            $0.removeFromSuperview()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,11 +30,11 @@ class FontRow: UITableViewCell {
         cardView.layer.cornerRadius = 20
     }
     
-    func configure(font: VFont) {
-        titleLabel.text = font.uiFont.fontName
-        titleLabel.font = font.uiFont
+    func configure(vFont: VFont) {
+        titleLabel.text = vFont.name
+        titleLabel.font = vFont.uiFont
         
-        for axis in font.axes {
+        for axis in vFont.axes {
             let axisName = axis.value.name.lowercased()
             let label = AxisTagLabel(name: axisName)
             

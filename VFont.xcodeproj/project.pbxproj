@@ -16,7 +16,7 @@
 		B084D651280FE6CB007D5DA5 /* VFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084D650280FE6CB007D5DA5 /* VFont.swift */; };
 		B084D659280FE908007D5DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084D658280FE908007D5DA5 /* AppDelegate.swift */; };
 		B084D65B280FE908007D5DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084D65A280FE908007D5DA5 /* SceneDelegate.swift */; };
-		B084D65D280FE908007D5DA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084D65C280FE908007D5DA5 /* ViewController.swift */; };
+		B084D65D280FE908007D5DA5 /* VFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084D65C280FE908007D5DA5 /* VFontViewController.swift */; };
 		B084D660280FE908007D5DA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B084D65E280FE908007D5DA5 /* Main.storyboard */; };
 		B084D662280FE909007D5DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B084D661280FE909007D5DA5 /* Assets.xcassets */; };
 		B084D665280FE909007D5DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B084D663280FE909007D5DA5 /* LaunchScreen.storyboard */; };
@@ -27,6 +27,9 @@
 		B084D6752810181E007D5DA5 /* Uncut-Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B084D6742810181E007D5DA5 /* Uncut-Sans.ttf */; };
 		B0AFC9EC2816C1630010F67A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFC9EB2816C1630010F67A /* PaddingLabel.swift */; };
 		B0AFC9EE2816C4A60010F67A /* AxisTagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFC9ED2816C4A60010F67A /* AxisTagLabel.swift */; };
+		B0AFC9F02816E2F10010F67A /* Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFC9EF2816E2F10010F67A /* Generated.swift */; };
+		B0AFC9F42816E6210010F67A /* AxisRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFC9F32816E6210010F67A /* AxisRow.swift */; };
+		B0AFC9F62816E6B30010F67A /* AxisRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AFC9F52816E6B30010F67A /* AxisRow.xib */; };
 		B0C89C682816AF1300A65F1F /* FontListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C89C672816AF1300A65F1F /* FontListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +76,7 @@
 		B084D656280FE908007D5DA5 /* VFontDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFontDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B084D658280FE908007D5DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B084D65A280FE908007D5DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B084D65C280FE908007D5DA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B084D65C280FE908007D5DA5 /* VFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFontViewController.swift; sourceTree = "<group>"; };
 		B084D65F280FE908007D5DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B084D661280FE909007D5DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B084D664280FE909007D5DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,6 +86,10 @@
 		B084D6742810181E007D5DA5 /* Uncut-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Uncut-Sans.ttf"; sourceTree = "<group>"; };
 		B0AFC9EB2816C1630010F67A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		B0AFC9ED2816C4A60010F67A /* AxisTagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxisTagLabel.swift; sourceTree = "<group>"; };
+		B0AFC9EF2816E2F10010F67A /* Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generated.swift; sourceTree = "<group>"; };
+		B0AFC9F12816E31E0010F67A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B0AFC9F32816E6210010F67A /* AxisRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxisRow.swift; sourceTree = "<group>"; };
+		B0AFC9F52816E6B30010F67A /* AxisRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AxisRow.xib; sourceTree = "<group>"; };
 		B0C89C672816AF1300A65F1F /* FontListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +134,8 @@
 		B0621E2F2816B44B00DFE8FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B0AFC9F52816E6B30010F67A /* AxisRow.xib */,
+				B0AFC9F32816E6210010F67A /* AxisRow.swift */,
 				B0621E302816B45F00DFE8FA /* FontRow.xib */,
 				B0621E322816B5E500DFE8FA /* FontRow.swift */,
 				B0AFC9EB2816C1630010F67A /* PaddingLabel.swift */,
@@ -189,7 +198,7 @@
 				B0621E2F2816B44B00DFE8FA /* View */,
 				B031B9112812D9640084FC56 /* Application */,
 				B0C89C662816ACD400A65F1F /* Fonts */,
-				B084D65C280FE908007D5DA5 /* ViewController.swift */,
+				B084D65C280FE908007D5DA5 /* VFontViewController.swift */,
 				B0C89C672816AF1300A65F1F /* FontListViewController.swift */,
 				B084D65E280FE908007D5DA5 /* Main.storyboard */,
 				B084D666280FE909007D5DA5 /* Info.plist */,
@@ -200,6 +209,7 @@
 		B084D66C280FEA2D007D5DA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0AFC9F12816E31E0010F67A /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +217,7 @@
 		B0C89C662816ACD400A65F1F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B0AFC9EF2816E2F10010F67A /* Generated.swift */,
 				B084D6742810181E007D5DA5 /* Uncut-Sans.ttf */,
 				B084D66A280FE925007D5DA5 /* Zvin Serif.ttf */,
 			);
@@ -348,6 +359,7 @@
 				B084D6752810181E007D5DA5 /* Uncut-Sans.ttf in Resources */,
 				B084D660280FE908007D5DA5 /* Main.storyboard in Resources */,
 				B0621E312816B45F00DFE8FA /* FontRow.xib in Resources */,
+				B0AFC9F62816E6B30010F67A /* AxisRow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,8 +388,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AFC9F42816E6210010F67A /* AxisRow.swift in Sources */,
 				B0AFC9EC2816C1630010F67A /* PaddingLabel.swift in Sources */,
-				B084D65D280FE908007D5DA5 /* ViewController.swift in Sources */,
+				B0AFC9F02816E2F10010F67A /* Generated.swift in Sources */,
+				B084D65D280FE908007D5DA5 /* VFontViewController.swift in Sources */,
 				B0C89C682816AF1300A65F1F /* FontListViewController.swift in Sources */,
 				B0621E332816B5E500DFE8FA /* FontRow.swift in Sources */,
 				B084D659280FE908007D5DA5 /* AppDelegate.swift in Sources */,

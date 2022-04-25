@@ -8,10 +8,10 @@
 import UIKit
 import VFont
 
-class FontListViewController: UIViewController {
+final class FontListViewController: UIViewController {
     
     private let defaultFontSize: CGFloat = 30.0
-    private var fonts: [VFont] = []
+    private var vFonts: [VFont] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,41 +19,58 @@ class FontListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
         configureTableView()
         readFonts()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
     
     // MARK: Functions
     
     private func configureTableView() {
+        tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(.init(nibName: "FontRow", bundle: nil), forCellReuseIdentifier: "FontRow")
+        
+        tableView.register(.init(nibName: FontRow.id, bundle: nil), forCellReuseIdentifier: FontRow.id)
     }
     
     private func readFonts() {
+        // TODO: загрузка из Info.Plist, дизайн ячейки, large title
+        
         let names = ["ZvinSerif", "Uncut-Sans"]
-        fonts = names.compactMap { VFont(name: $0, size: defaultFontSize) }
+        vFonts = names.compactMap { VFont(name: $0, size: defaultFontSize) }
     }
     
 }
 
-extension FontListViewController: UITableViewDataSource {
+// MARK: - UITableView DataSource & UITableViewDelegate
+
+extension FontListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FontRow", for: indexPath) as? FontRow
+        let row = tableView.dequeueReusableCell(withIdentifier: FontRow.id, for: indexPath) as? FontRow
         
-        let font = fonts[indexPath.row]
-        cell?.configure(font: font)
+        let vFont = vFonts[indexPath.row]
+        row?.configure(vFont: vFont)
         
-        return cell ?? .init()
+        return row ?? .init()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fonts.count
+        return vFonts.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vFont = vFonts[indexPath.row]
+        
+        guard let vFontViewController = VFontViewController.instance(vFont: vFont) else {
+            return
+        }
+        
+        navigationController?.pushViewController(vFontViewController, animated: true)
     }
     
 }

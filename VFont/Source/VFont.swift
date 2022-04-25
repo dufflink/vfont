@@ -14,6 +14,12 @@ open class VFont {
     
     public var updated: ((UIFont?) -> Void)?
     
+    public var name: String
+    
+    public var variableFontName: String {
+        return uiFont.fontName
+    }
+    
     // MARK: Life Cycle
     
     public init?(name: String, size: CGFloat) {
@@ -29,6 +35,7 @@ open class VFont {
             return nil
         }
         
+        self.name = name
         self.uiFont = uiFont
         
         self.axes = variationAxes.reduce(into: [Int: Axis]()) { result, axis in

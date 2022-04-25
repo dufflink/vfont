@@ -9,47 +9,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--VFont View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VFontDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VFontViewController" id="BYZ-38-t0r" userLabel="VFont View Controller" customClass="VFontViewController" customModule="VFontDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOh-yR-IBY">
-                                <rect key="frame" x="16" y="60" width="382" height="61"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RJX-mj-ttE">
+                                <rect key="frame" x="0.0" y="129" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syD-w2-bo8" userLabel="Text Label">
+                                <rect key="frame" x="12" y="56" width="390" height="61"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="400" minValue="400" maxValue="900" translatesAutoresizingMaskIntoConstraints="NO" id="ZN6-23-ckQ">
-                                <rect key="frame" x="18" y="816" width="378" height="31"/>
-                                <connections>
-                                    <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="jTB-hU-FYg"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yOh-yR-IBY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RgD-FA-Cu0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yOh-yR-IBY" secondAttribute="trailing" constant="16" id="dU1-9U-bXI"/>
-                            <constraint firstItem="yOh-yR-IBY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="jon-U8-FQQ"/>
-                            <constraint firstItem="ZN6-23-ckQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rZ1-k3-gZw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZN6-23-ckQ" secondAttribute="trailing" constant="20" id="uAN-8a-7s4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZN6-23-ckQ" secondAttribute="bottom" constant="16" id="zOr-jv-tD7"/>
+                            <constraint firstAttribute="bottom" secondItem="RJX-mj-ttE" secondAttribute="bottom" id="8xf-7O-Uie"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="syD-w2-bo8" secondAttribute="trailing" constant="12" id="9mz-ES-1x8"/>
+                            <constraint firstItem="RJX-mj-ttE" firstAttribute="top" secondItem="syD-w2-bo8" secondAttribute="bottom" constant="12" id="PI9-ML-073"/>
+                            <constraint firstItem="RJX-mj-ttE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pq3-uM-CbZ"/>
+                            <constraint firstItem="syD-w2-bo8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="VDS-Af-aky"/>
+                            <constraint firstItem="syD-w2-bo8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="Vzr-Gg-o57"/>
+                            <constraint firstItem="RJX-mj-ttE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nhN-x4-oOE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="label" destination="yOh-yR-IBY" id="Z4c-hz-roW"/>
-                        <outlet property="slider" destination="ZN6-23-ckQ" id="Xng-ao-udb"/>
+                        <outlet property="tableView" destination="RJX-mj-ttE" id="gVz-1J-mPr"/>
+                        <outlet property="textLabel" destination="syD-w2-bo8" id="tlY-dk-cAB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="104"/>
+            <point key="canvasLocation" x="882.60869565217399" y="103.79464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tpr-SL-Crf">
@@ -58,6 +57,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ifw-io-x4U">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <connections>
                         <segue destination="n6K-AJ-YUz" kind="relationship" relationship="rootViewController" id="WGp-KQ-97T"/>
@@ -75,7 +75,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5oF-5W-uDn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5oF-5W-uDn">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
