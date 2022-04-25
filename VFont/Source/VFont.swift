@@ -18,7 +18,7 @@ open class VFont {
     
     public init?(name: String, size: CGFloat) {
         guard let uiFont = UIFont(name: name, size: size) else {
-            print("Couldn't init font. Make sure you've added font to project")
+            print("Couldn't init font. Make sure you've added font to project. Please, check the font name is correct.")
             return nil
         }
         

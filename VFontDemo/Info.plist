@@ -4,8 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>ZvinSerifGX.ttf</string>
-		<string>Uncut-Sans-VF.ttf</string>
+		<string>Zvin Serif.ttf</string>
+		<string>Uncut-Sans.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
