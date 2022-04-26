@@ -13,14 +13,19 @@ final class FontListViewController: UIViewController {
     private let defaultFontSize: CGFloat = 30.0
     private var vFonts: [VFont] = []
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
         readFonts()
+        
+        if vFonts.isEmpty {
+            tableView.isHidden = true
+        } else {
+            configureTableView()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,10 +43,11 @@ final class FontListViewController: UIViewController {
     }
     
     private func readFonts() {
-        // TODO: загрузка из Info.Plist, дизайн ячейки, large title
+        guard let fontNames = InfoPlistReader().getFontNames() else {
+            return
+        }
         
-        let names = ["ZvinSerif", "Uncut-Sans"]
-        vFonts = names.compactMap { VFont(name: $0, size: defaultFontSize) }
+        vFonts = fontNames.compactMap { VFont(name: $0, size: defaultFontSize) }
     }
     
 }

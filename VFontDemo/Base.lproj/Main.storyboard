@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,6 +42,7 @@
                             <constraint firstItem="RJX-mj-ttE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nhN-x4-oOE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qcS-Nf-uco"/>
                     <connections>
                         <outlet property="tableView" destination="RJX-mj-ttE" id="gVz-1J-mPr"/>
                         <outlet property="textLabel" destination="syD-w2-bo8" id="tlY-dk-cAB"/>
@@ -48,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882.60869565217399" y="103.79464285714285"/>
+            <point key="canvasLocation" x="820" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tpr-SL-Crf">
@@ -57,7 +59,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ifw-io-x4U">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <connections>
                         <segue destination="n6K-AJ-YUz" kind="relationship" relationship="rootViewController" id="WGp-KQ-97T"/>
@@ -75,7 +76,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5oF-5W-uDn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure you have added fonts to the project and to the Info.plist file correctly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVd-Dz-qwG" userLabel="Hint Label">
+                                <rect key="frame" x="64" y="417.5" width="286" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5oF-5W-uDn">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -85,7 +92,11 @@
                         <constraints>
                             <constraint firstItem="5oF-5W-uDn" firstAttribute="leading" secondItem="0vr-pS-NVn" secondAttribute="leading" id="1dU-V6-I6g"/>
                             <constraint firstItem="5oF-5W-uDn" firstAttribute="trailing" secondItem="0vr-pS-NVn" secondAttribute="trailing" id="6Jg-zR-4YM"/>
+                            <constraint firstItem="YVd-Dz-qwG" firstAttribute="centerY" secondItem="h6J-fi-hqR" secondAttribute="centerY" id="DEY-zT-DHD"/>
+                            <constraint firstItem="0vr-pS-NVn" firstAttribute="trailing" secondItem="YVd-Dz-qwG" secondAttribute="trailing" constant="64" id="FHI-Rp-DIb"/>
+                            <constraint firstItem="YVd-Dz-qwG" firstAttribute="centerX" secondItem="h6J-fi-hqR" secondAttribute="centerX" id="HBM-uR-bOh"/>
                             <constraint firstItem="5oF-5W-uDn" firstAttribute="top" secondItem="0vr-pS-NVn" secondAttribute="top" id="VhN-dm-3Sc"/>
+                            <constraint firstItem="YVd-Dz-qwG" firstAttribute="leading" secondItem="0vr-pS-NVn" secondAttribute="leading" constant="64" id="XuY-nv-urQ"/>
                             <constraint firstAttribute="bottom" secondItem="5oF-5W-uDn" secondAttribute="bottom" id="ufk-QD-FWZ"/>
                         </constraints>
                     </view>
@@ -100,6 +111,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.5820000171661377" green="0.33500000834465027" blue="0.78700000047683716" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

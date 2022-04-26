@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0495C322817F1F200FF95F0 /* InfoPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0495C312817F1F200FF95F0 /* InfoPlistReader.swift */; };
 		B0621E312816B45F00DFE8FA /* FontRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0621E302816B45F00DFE8FA /* FontRow.xib */; };
 		B0621E332816B5E500DFE8FA /* FontRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0621E322816B5E500DFE8FA /* FontRow.swift */; };
 		B084D63A280FE67D007D5DA5 /* VFont.docc in Sources */ = {isa = PBXBuildFile; fileRef = B084D639280FE67D007D5DA5 /* VFont.docc */; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B0495C312817F1F200FF95F0 /* InfoPlistReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistReader.swift; sourceTree = "<group>"; };
 		B0621E302816B45F00DFE8FA /* FontRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontRow.xib; sourceTree = "<group>"; };
 		B0621E322816B5E500DFE8FA /* FontRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRow.swift; sourceTree = "<group>"; };
 		B084D635280FE67D007D5DA5 /* VFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				B0AFC9EF2816E2F10010F67A /* Generated.swift */,
+				B0495C312817F1F200FF95F0 /* InfoPlistReader.swift */,
 				B084D6742810181E007D5DA5 /* Uncut-Sans.ttf */,
 				B084D66A280FE925007D5DA5 /* Zvin Serif.ttf */,
 			);
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0AFC9F42816E6210010F67A /* AxisRow.swift in Sources */,
+				B0495C322817F1F200FF95F0 /* InfoPlistReader.swift in Sources */,
 				B0AFC9EC2816C1630010F67A /* PaddingLabel.swift in Sources */,
 				B0AFC9F02816E2F10010F67A /* Generated.swift in Sources */,
 				B084D65D280FE908007D5DA5 /* VFontViewController.swift in Sources */,

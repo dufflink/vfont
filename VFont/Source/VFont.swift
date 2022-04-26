@@ -30,7 +30,7 @@ open class VFont {
         
         let ctFont = CTFontCreateWithName(uiFont.fontName as CFString, size, nil)
         
-        guard let variationAxes = CTFontCopyVariationAxes(ctFont) as? Array<Any>, !variationAxes.isEmpty else {
+        guard let variationAxes = CTFontCopyVariationAxes(ctFont) as? [Any], !variationAxes.isEmpty else {
             print("This font dosn't support variations")
             return nil
         }
