@@ -2,8 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Martian Mono.ttf</string>
+		<string>Inter.ttf</string>
 		<string>Zvin Serif.ttf</string>
 		<string>Uncut-Sans.ttf</string>
 	</array>

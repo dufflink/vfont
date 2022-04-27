@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B0495C322817F1F200FF95F0 /* InfoPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0495C312817F1F200FF95F0 /* InfoPlistReader.swift */; };
+		B05E31E628195485008C6B4B /* Martian Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05E31E528195485008C6B4B /* Martian Mono.ttf */; };
+		B05E31E828195596008C6B4B /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05E31E728195596008C6B4B /* Inter.ttf */; };
 		B0621E312816B45F00DFE8FA /* FontRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0621E302816B45F00DFE8FA /* FontRow.xib */; };
 		B0621E332816B5E500DFE8FA /* FontRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0621E322816B5E500DFE8FA /* FontRow.swift */; };
 		B084D63A280FE67D007D5DA5 /* VFont.docc in Sources */ = {isa = PBXBuildFile; fileRef = B084D639280FE67D007D5DA5 /* VFont.docc */; };
@@ -67,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		B0495C312817F1F200FF95F0 /* InfoPlistReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistReader.swift; sourceTree = "<group>"; };
+		B05E31E528195485008C6B4B /* Martian Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Martian Mono.ttf"; sourceTree = "<group>"; };
+		B05E31E728195596008C6B4B /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 		B0621E302816B45F00DFE8FA /* FontRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontRow.xib; sourceTree = "<group>"; };
 		B0621E322816B5E500DFE8FA /* FontRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRow.swift; sourceTree = "<group>"; };
 		B084D635280FE67D007D5DA5 /* VFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +227,8 @@
 				B0495C312817F1F200FF95F0 /* InfoPlistReader.swift */,
 				B084D6742810181E007D5DA5 /* Uncut-Sans.ttf */,
 				B084D66A280FE925007D5DA5 /* Zvin Serif.ttf */,
+				B05E31E728195596008C6B4B /* Inter.ttf */,
+				B05E31E528195485008C6B4B /* Martian Mono.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -357,10 +363,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B084D665280FE909007D5DA5 /* LaunchScreen.storyboard in Resources */,
+				B05E31E628195485008C6B4B /* Martian Mono.ttf in Resources */,
 				B084D662280FE909007D5DA5 /* Assets.xcassets in Resources */,
 				B084D66B280FE925007D5DA5 /* Zvin Serif.ttf in Resources */,
 				B084D6752810181E007D5DA5 /* Uncut-Sans.ttf in Resources */,
 				B084D660280FE908007D5DA5 /* Main.storyboard in Resources */,
+				B05E31E828195596008C6B4B /* Inter.ttf in Resources */,
 				B0621E312816B45F00DFE8FA /* FontRow.xib in Resources */,
 				B0AFC9F62816E6B30010F67A /* AxisRow.xib in Resources */,
 			);
