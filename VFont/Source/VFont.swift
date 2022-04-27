@@ -5,16 +5,19 @@
 //  Created by Maxim Skorynin on 20.04.2022.
 //
 
-import UIKit
+import SwiftUI
 
 open class VFont {
     
     private(set) public var uiFont: UIFont
+    private(set) public var ctFont: CTFont
+    
+    private(set) public var name: String
+    private(set) public var size: CGFloat
+    
     private(set) public var axes: [Int: Axis]
     
     public var updated: ((UIFont?) -> Void)?
-    
-    public var name: String
     
     public var variableFontName: String {
         return uiFont.fontName
@@ -36,7 +39,10 @@ open class VFont {
         }
         
         self.name = name
+        self.size = size
+        
         self.uiFont = uiFont
+        self.ctFont = ctFont
         
         self.axes = variationAxes.reduce(into: [Int: Axis]()) { result, axis in
             let axisDict = axis as? [String: Any] ?? [:]
@@ -93,10 +99,35 @@ open class VFont {
         }
         
         let key = kCTFontVariationAttribute as UIFontDescriptor.AttributeName
-        let fontDescriptor = UIFontDescriptor(fontAttributes: [.name: uiFont.fontName, key: variations])
         
-        uiFont = UIFont(descriptor: fontDescriptor, size: uiFont.pointSize)
+        let uiFontDescriptor = UIFontDescriptor(fontAttributes: [.name: uiFont.fontName, key: variations])
+        uiFont = UIFont(descriptor: uiFontDescriptor, size: uiFont.pointSize)
+        
+        let originalCTFontDescriptor = CTFontCopyFontDescriptor(ctFont) as CTFontDescriptor
+        let ctFontAttributes = [key: variations] as CFDictionary
+        
+        let ctFontDescriptor = CTFontDescriptorCreateCopyWithAttributes(originalCTFontDescriptor, ctFontAttributes)
+        ctFont = CTFont(ctFontDescriptor, size: size)
     }
     
 }
 
+// MARK: - SwiftUI Support
+
+@available(iOS 13.0, *)
+public extension Font {
+    
+    init(vFont: VFont, value: CGFloat, axisID: Int) {
+        vFont.setValue(value, axisID: axisID)
+        self.init(vFont.ctFont)
+    }
+    
+    init(vFont: VFont, axes: [Int: CGFloat]) {
+        axes.forEach { axisID, value in
+            vFont.setValue(value, axisID: axisID)
+        }
+        
+        self.init(vFont.ctFont)
+    }
+    
+}

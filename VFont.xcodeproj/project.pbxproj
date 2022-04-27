@@ -10,6 +10,13 @@
 		B0495C322817F1F200FF95F0 /* InfoPlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0495C312817F1F200FF95F0 /* InfoPlistReader.swift */; };
 		B05E31E628195485008C6B4B /* Martian Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05E31E528195485008C6B4B /* Martian Mono.ttf */; };
 		B05E31E828195596008C6B4B /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05E31E728195596008C6B4B /* Inter.ttf */; };
+		B05E320428195A8A008C6B4B /* VFontDemoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E320328195A8A008C6B4B /* VFontDemoSwiftUIApp.swift */; };
+		B05E320628195A8A008C6B4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E320528195A8A008C6B4B /* ContentView.swift */; };
+		B05E320828195A8B008C6B4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B05E320728195A8B008C6B4B /* Assets.xcassets */; };
+		B05E320B28195A8B008C6B4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B05E320A28195A8B008C6B4B /* Preview Assets.xcassets */; };
+		B05E320F28195A93008C6B4B /* VFont.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B084D635280FE67D007D5DA5 /* VFont.framework */; };
+		B05E321028195A93008C6B4B /* VFont.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B084D635280FE67D007D5DA5 /* VFont.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B05E321628195C6E008C6B4B /* Martian Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B05E321528195BA4008C6B4B /* Martian Mono.ttf */; };
 		B0621E312816B45F00DFE8FA /* FontRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0621E302816B45F00DFE8FA /* FontRow.xib */; };
 		B0621E332816B5E500DFE8FA /* FontRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0621E322816B5E500DFE8FA /* FontRow.swift */; };
 		B084D63A280FE67D007D5DA5 /* VFont.docc in Sources */ = {isa = PBXBuildFile; fileRef = B084D639280FE67D007D5DA5 /* VFont.docc */; };
@@ -37,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B05E321128195A93008C6B4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B084D62C280FE67D007D5DA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B084D634280FE67D007D5DA5;
+			remoteInfo = VFont;
+		};
 		B084D641280FE67D007D5DA5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B084D62C280FE67D007D5DA5 /* Project object */;
@@ -54,6 +68,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B05E321328195A93008C6B4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B05E321028195A93008C6B4B /* VFont.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B084D671280FEA2D007D5DA5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +96,13 @@
 		B0495C312817F1F200FF95F0 /* InfoPlistReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlistReader.swift; sourceTree = "<group>"; };
 		B05E31E528195485008C6B4B /* Martian Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Martian Mono.ttf"; sourceTree = "<group>"; };
 		B05E31E728195596008C6B4B /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
+		B05E320128195A8A008C6B4B /* VFontDemoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFontDemoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B05E320328195A8A008C6B4B /* VFontDemoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFontDemoSwiftUIApp.swift; sourceTree = "<group>"; };
+		B05E320528195A8A008C6B4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B05E320728195A8B008C6B4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B05E320A28195A8B008C6B4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B05E321428195B94008C6B4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B05E321528195BA4008C6B4B /* Martian Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Martian Mono.ttf"; sourceTree = "<group>"; };
 		B0621E302816B45F00DFE8FA /* FontRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontRow.xib; sourceTree = "<group>"; };
 		B0621E322816B5E500DFE8FA /* FontRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRow.swift; sourceTree = "<group>"; };
 		B084D635280FE67D007D5DA5 /* VFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +132,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B05E31FE28195A8A008C6B4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B05E320F28195A93008C6B4B /* VFont.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B084D632280FE67D007D5DA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,6 +177,27 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		B05E320228195A8A008C6B4B /* VFontDemoSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				B05E321528195BA4008C6B4B /* Martian Mono.ttf */,
+				B05E321428195B94008C6B4B /* Info.plist */,
+				B05E320328195A8A008C6B4B /* VFontDemoSwiftUIApp.swift */,
+				B05E320528195A8A008C6B4B /* ContentView.swift */,
+				B05E320728195A8B008C6B4B /* Assets.xcassets */,
+				B05E320928195A8B008C6B4B /* Preview Content */,
+			);
+			path = VFontDemoSwiftUI;
+			sourceTree = "<group>";
+		};
+		B05E320928195A8B008C6B4B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B05E320A28195A8B008C6B4B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		B0621E2F2816B44B00DFE8FA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +217,7 @@
 				B084D637280FE67D007D5DA5 /* VFont */,
 				B084D643280FE67D007D5DA5 /* VFontTests */,
 				B084D657280FE908007D5DA5 /* VFontDemo */,
+				B05E320228195A8A008C6B4B /* VFontDemoSwiftUI */,
 				B084D636280FE67D007D5DA5 /* Products */,
 				B084D66C280FEA2D007D5DA5 /* Frameworks */,
 			);
@@ -167,6 +229,7 @@
 				B084D635280FE67D007D5DA5 /* VFont.framework */,
 				B084D63F280FE67D007D5DA5 /* VFontTests.xctest */,
 				B084D656280FE908007D5DA5 /* VFontDemo.app */,
+				B05E320128195A8A008C6B4B /* VFontDemoSwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +310,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		B05E320028195A8A008C6B4B /* VFontDemoSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B05E320E28195A8B008C6B4B /* Build configuration list for PBXNativeTarget "VFontDemoSwiftUI" */;
+			buildPhases = (
+				B05E31FD28195A8A008C6B4B /* Sources */,
+				B05E31FE28195A8A008C6B4B /* Frameworks */,
+				B05E31FF28195A8A008C6B4B /* Resources */,
+				B05E321328195A93008C6B4B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B05E321228195A93008C6B4B /* PBXTargetDependency */,
+			);
+			name = VFontDemoSwiftUI;
+			productName = VFontDemoSwiftUI;
+			productReference = B05E320128195A8A008C6B4B /* VFontDemoSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B084D634280FE67D007D5DA5 /* VFont */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B084D649280FE67D007D5DA5 /* Build configuration list for PBXNativeTarget "VFont" */;
@@ -312,6 +394,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					B05E320028195A8A008C6B4B = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					B084D634280FE67D007D5DA5 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -339,11 +424,22 @@
 				B084D634280FE67D007D5DA5 /* VFont */,
 				B084D63E280FE67D007D5DA5 /* VFontTests */,
 				B084D655280FE908007D5DA5 /* VFontDemo */,
+				B05E320028195A8A008C6B4B /* VFontDemoSwiftUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B05E31FF28195A8A008C6B4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B05E320B28195A8B008C6B4B /* Preview Assets.xcassets in Resources */,
+				B05E321628195C6E008C6B4B /* Martian Mono.ttf in Resources */,
+				B05E320828195A8B008C6B4B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B084D633280FE67D007D5DA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +473,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B05E31FD28195A8A008C6B4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B05E320628195A8A008C6B4B /* ContentView.swift in Sources */,
+				B05E320428195A8A008C6B4B /* VFontDemoSwiftUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B084D631280FE67D007D5DA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,6 +520,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B05E321228195A93008C6B4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B084D634280FE67D007D5DA5 /* VFont */;
+			targetProxy = B05E321128195A93008C6B4B /* PBXContainerItemProxy */;
+		};
 		B084D642280FE67D007D5DA5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B084D634280FE67D007D5DA5 /* VFont */;
@@ -447,6 +557,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B05E320C28195A8B008C6B4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VFontDemoSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = CX6AZ34SLQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VFontDemoSwiftUI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = evilmartians.VFontDemoSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B05E320D28195A8B008C6B4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VFontDemoSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = CX6AZ34SLQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VFontDemoSwiftUI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = evilmartians.VFontDemoSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B084D647280FE67D007D5DA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,7 +743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CX6AZ34SLQ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -585,7 +757,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = evilmartians.VFont;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -599,7 +771,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CX6AZ34SLQ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -613,7 +785,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = evilmartians.VFont;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -718,6 +890,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B05E320E28195A8B008C6B4B /* Build configuration list for PBXNativeTarget "VFontDemoSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B05E320C28195A8B008C6B4B /* Debug */,
+				B05E320D28195A8B008C6B4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B084D62F280FE67D007D5DA5 /* Build configuration list for PBXProject "VFont" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
