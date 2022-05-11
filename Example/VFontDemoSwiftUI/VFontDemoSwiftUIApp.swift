@@ -2,7 +2,7 @@
 //  VFontDemoSwiftUIApp.swift
 //  VFontDemoSwiftUI
 //
-//  Created by Maxim Skorynin on 27.04.2022.
+//  Created by Maxim Skorynin on 11.05.2022.
 //
 
 import SwiftUI

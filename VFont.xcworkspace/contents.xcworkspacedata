@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Source/VFont.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Source/../Example/VFontDemoUIKit/VFontDemoUIKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Example/VFontDemoSwiftUI/VFontDemoSwiftUI.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  VFontDemoSwiftUI
 //
-//  Created by Maxim Skorynin on 27.04.2022.
+//  Created by Maxim Skorynin on 11.05.2022.
 //
 
 import SwiftUI
@@ -10,8 +10,8 @@ import VFont
 
 struct ContentView: View {
     
-    @State private var widthAxisValue = 0.0
-    @State private var weightAxisValue = 0.0
+    @State private var widthAxisValue = 75.0
+    @State private var weightAxisValue = 100.0
     
     private let font = VFont(name: "Martian Mono", size: 20)!
     
@@ -40,3 +40,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
