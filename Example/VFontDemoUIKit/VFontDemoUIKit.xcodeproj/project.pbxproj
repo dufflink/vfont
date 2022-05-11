@@ -38,6 +38,13 @@
 			remoteGlobalIDString = B084D635280FE67D007D5DA5;
 			remoteInfo = VFont;
 		};
+		B06F8960282BBC6B0052C7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06F895B282BBC6B0052C7A7 /* VFontDemoSwiftUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B06F8945282BBBCC0052C7A7;
+			remoteInfo = VFontDemoSwiftUI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +64,7 @@
 /* Begin PBXFileReference section */
 		B0221345282BB8B0008F5E95 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0221347282BB9C9008F5E95 /* VFont.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VFont.xcodeproj; path = ../../Source/VFont.xcodeproj; sourceTree = "<group>"; };
+		B06F895B282BBC6B0052C7A7 /* VFontDemoSwiftUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VFontDemoSwiftUI.xcodeproj; path = ../VFontDemoSwiftUI/VFontDemoSwiftUI.xcodeproj; sourceTree = "<group>"; };
 		B088B858282BB6ED00F246D6 /* VFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B092295B282BB3110085DE53 /* VFontDemoUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFontDemoUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B092295E282BB3110085DE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +108,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B06F895C282BBC6B0052C7A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B06F8961282BBC6B0052C7A7 /* VFontDemoSwiftUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B088B800282BB53900F246D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +128,7 @@
 		B0922952282BB3110085DE53 = {
 			isa = PBXGroup;
 			children = (
+				B06F895B282BBC6B0052C7A7 /* VFontDemoSwiftUI.xcodeproj */,
 				B0922972282BB3830085DE53 /* Application */,
 				B0922973282BB3B30085DE53 /* Fonts */,
 				B0922988282BB4080085DE53 /* View */,
@@ -221,6 +238,10 @@
 					ProductGroup = B0221348282BB9C9008F5E95 /* Products */;
 					ProjectRef = B0221347282BB9C9008F5E95 /* VFont.xcodeproj */;
 				},
+				{
+					ProductGroup = B06F895C282BBC6B0052C7A7 /* Products */;
+					ProjectRef = B06F895B282BBC6B0052C7A7 /* VFontDemoSwiftUI.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -235,6 +256,13 @@
 			fileType = wrapper.framework;
 			path = VFont.framework;
 			remoteRef = B022134B282BB9C9008F5E95 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B06F8961282BBC6B0052C7A7 /* VFontDemoSwiftUI.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = VFontDemoSwiftUI.app;
+			remoteRef = B06F8960282BBC6B0052C7A7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -419,6 +447,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,6 +476,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

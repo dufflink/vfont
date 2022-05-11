@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Source/../Example/VFontDemoUIKit/VFontDemoUIKit.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Example/VFontDemoSwiftUI/VFontDemoSwiftUI.xcodeproj">
+   </FileRef>
 </Workspace>
