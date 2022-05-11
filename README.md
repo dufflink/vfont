@@ -78,22 +78,22 @@ import VFont
 
 struct ContentView: View {
     
-    @State private var widthAxisValue: CGFloat = 75.0
-    @State private var weightAxisValue: CGFloat = 100.0
+    @State private var width: CGFloat = 75.0
+    @State private var weight: CGFloat = 100.0
     
     private let font = VFont(name: "Martian Mono", size: 20)!
     
     var body: some View {
         VStack {
             Text("Evil Martians")
-                .font(.init(vFont: font, value: widthAxisValue, axisID: 2003072104))
+                .font(.init(vFont: font, value: width, axisID: 2003072104))
             
             // or init with axis array
             
             Text("Hello, world!")
                 .font(.init(vFont: font, axes: [
-                    2003072104: widthAxisValue,
-                    2003265652: weightAxisValue
+                    2003072104: width,
+                    2003265652: weight
                 ]))
         }
     }
