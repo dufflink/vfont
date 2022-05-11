@@ -44,7 +44,7 @@ vFont.setValue(400, axisID: 2003265652) // 2003265652 - Weight axis ID
 #### Updating
 Override the `updated` closure to setup new `VFont` variation after his updating. The clouser returns new `UIFont` object.
 ```swift
-vFont?.updated = { uiFont in
+vFont.updated = { uiFont in
     label.font = uiFont
 }
 ```
