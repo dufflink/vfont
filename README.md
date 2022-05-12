@@ -109,7 +109,7 @@ pod 'Vfont'
 #### Preparing
 First, you need to add the custom variable font to your project. If you've never done it, I would recommend reading this [tutorial](https://sarunw.com/posts/how-to-add-custom-fonts-to-ios-app).
 
-## UIKit
+### UIKit
 #### Initialization
 To initialize a new `VFont` object, use its own full font name and size value.
 > ❗️ Be aware of the font file name can be different from the actual font name! To get the correct full font name upload the font file to the [fontgauntlet.com](https://fontgauntlet.com/).
@@ -170,7 +170,7 @@ vFont.updated = { uiFont in
 }
 ```
 
-## SwiftUI
+### SwiftUI
 ```swift
 import VFont
 
@@ -190,9 +190,10 @@ struct ContentView: View {
     }
 }
 ```
-## Font class
+## Advanced usage
 If you use UIKit, you can create your own font class inheriting the Vfont class!
-#### UIKit
+
+### UIKit
 
 ```swift
 import VFont
@@ -227,7 +228,7 @@ let font = MartianMono(size: 16)
 font?.weight = 300
 font?.width = 90
 ```
-#### SwiftUI
+### SwiftUI
 In a SwiftUI project you can create `static method` as a `Font` structure extension
 ```swift
 extension Font {
