@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'VFont'
-  s.version = '0.4.1'
+  s.version = '0.5.0'
 
   s.license = { :type => 'MIT', :file => 'LICENSE.md' }
   s.summary = 'Variable Fonts in Swift and SwiftUI'
