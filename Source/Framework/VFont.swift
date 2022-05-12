@@ -27,16 +27,18 @@ open class VFont {
     
     public init?(name: String, size: CGFloat) {
         guard let uiFont = UIFont(name: name, size: size) else {
-            print("Couldn't init font. Make sure you've added font to project. Please, check the font name is correct.")
+            print("Couldn't init font \(name). Make sure you've added this font to the project. Please, check the font name is correct.")
             return nil
         }
         
         let ctFont = CTFontCreateWithName(uiFont.fontName as CFString, size, nil)
         
         guard let variationAxes = CTFontCopyVariationAxes(ctFont) as? [Any], !variationAxes.isEmpty else {
-            print("This font dosn't support variations")
+            print("This font \(uiFont.fontName) doesn't support variations")
             return nil
         }
+        
+        print(variationAxes)
         
         self.name = name
         self.size = size
@@ -51,7 +53,7 @@ open class VFont {
                 if let key = Axis.AttrubuteName(rawValue: attribute.key) {
                     result[key] = attribute.value
                 } else {
-                    print("Couldn't parse \(attribute.key) font attribute")
+                    print("Couldn't parse the \(attribute.key) font attribute")
                 }
             }
             
@@ -64,7 +66,12 @@ open class VFont {
     
     public func setValue(_ value: CGFloat, axisID: Int) {
         guard let axis = axes[axisID] else {
-            print("This axis with \(axisID) id doesn't exist")
+            print("This axis with '\(axisID)' id doesn't exist")
+            return
+        }
+        
+        guard value >= axis.minValue, value <= axis.maxValue else {
+            print("You are trying to set a not allowed value \(value). Min value can be \(axis.minValue). Max value can be \(axis.maxValue)")
             return
         }
         
@@ -75,7 +82,7 @@ open class VFont {
     }
     
     public func getAxesDescription() -> String {
-        var description = "Font - \(uiFont.fontName)\n\n"
+        var description = "Font - \(name)\n\n"
         description += "Axes:\n"
         
         axes.forEach {
@@ -100,7 +107,7 @@ open class VFont {
         
         let key = kCTFontVariationAttribute as UIFontDescriptor.AttributeName
         
-        let uiFontDescriptor = UIFontDescriptor(fontAttributes: [.name: uiFont.fontName, key: variations])
+        let uiFontDescriptor = UIFontDescriptor(fontAttributes: [.name: variableFontName, key: variations])
         uiFont = UIFont(descriptor: uiFontDescriptor, size: uiFont.pointSize)
         
         let originalCTFontDescriptor = CTFontCopyFontDescriptor(ctFont) as CTFontDescriptor
@@ -114,20 +121,28 @@ open class VFont {
 
 // MARK: - SwiftUI Support
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 public extension Font {
     
-    init(vFont: VFont, value: CGFloat, axisID: Int) {
-        vFont.setValue(value, axisID: axisID)
-        self.init(vFont.ctFont)
+    static func vFont(_ name: String, size: CGFloat, axisID: Int, value: CGFloat) -> Font {
+        let vFont = VFont(name: name, size: size)
+        vFont?.setValue(value, axisID: axisID)
+        
+        let ctFont = vFont?.ctFont ?? CTFontCreateUIFontForLanguage(.system, size, nil)!
+        
+        return Font(ctFont)
     }
     
-    init(vFont: VFont, axes: [Int: CGFloat]) {
+    static func vFont(_ name: String, size: CGFloat, axes: [Int: CGFloat] = [:]) -> Font {
+        let vFont = VFont(name: name, size: size)
+        
         axes.forEach { axisID, value in
-            vFont.setValue(value, axisID: axisID)
+            vFont?.setValue(value, axisID: axisID)
         }
         
-        self.init(vFont.ctFont)
+        let ctFont = vFont?.ctFont ?? CTFontCreateUIFontForLanguage(.system, size, nil)!
+        
+        return Font(ctFont)
     }
     
 }
