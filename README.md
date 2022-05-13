@@ -1,4 +1,6 @@
-![VFont Logo Icon](https://user-images.githubusercontent.com/29461219/168282928-cd6bd7ea-12e0-4572-8a8b-2b65538edb03.svg)
+<p align="center">
+  <img height="160" src="https://user-images.githubusercontent.com/29461219/168282928-cd6bd7ea-12e0-4572-8a8b-2b65538edb03.svg" />
+</p>
 
 # VFont
 [![Version](https://img.shields.io/badge/Version-0.5.0-red?style=flat-square)](https://img.shields.io/badge/Version-0.5.0-red?style=flat-square)
