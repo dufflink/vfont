@@ -38,8 +38,6 @@ open class VFont {
             return nil
         }
         
-        print(variationAxes)
-        
         self.name = name
         self.size = size
         
