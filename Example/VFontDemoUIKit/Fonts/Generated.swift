@@ -18,7 +18,7 @@ class Zerif: VFont {
         get {
             return axes[2003265652]?.value ?? .zero
         } set {
-            setValue(newValue, axisID: 2003265652)
+            setValue(newValue, forAxisID: 2003265652)
         }
     }
     

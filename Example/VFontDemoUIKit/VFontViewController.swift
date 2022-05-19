@@ -76,7 +76,7 @@ extension VFontViewController: UITableViewDataSource {
 extension VFontViewController: AxisRowDelegate {
     
     func axisDidChange(_ axis: Axis, value: CGFloat) {
-        vFont.setValue(value, axisID: axis.id)
+        vFont.setValue(value, forAxisID: axis.id)
     }
     
 }

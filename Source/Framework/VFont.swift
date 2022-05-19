@@ -10,7 +10,6 @@ import SwiftUI
 open class VFont {
     
     private(set) public var uiFont: UIFont
-    private(set) public var ctFont: CTFont
     
     private(set) public var name: String
     private(set) public var size: CGFloat
@@ -42,7 +41,6 @@ open class VFont {
         self.size = size
         
         self.uiFont = uiFont
-        self.ctFont = ctFont
         
         self.axes = variationAxes.reduce(into: [Int: Axis]()) { result, axis in
             let axisDict = axis as? [String: Any] ?? [:]
@@ -62,18 +60,17 @@ open class VFont {
     
     // MARK: Public Functions
     
-    public func setValue(_ value: CGFloat, axisID: Int) {
-        guard let axis = axes[axisID] else {
-            print("This axis with '\(axisID)' id doesn't exist")
-            return
-        }
+    public func setValue(_ value: CGFloat, forAxisID id: Int) {
+        _setValue(value, axisID: id)
         
-        guard value >= axis.minValue, value <= axis.maxValue else {
-            print("You are trying to set a not allowed value \(value). Min value can be \(axis.minValue). Max value can be \(axis.maxValue)")
-            return
+        updateFont()
+        updated?(uiFont)
+    }
+    
+    public func setValues(forAxes axes: [Int: CGFloat]) {
+        axes.forEach { axisID, value in
+            _setValue(value, axisID: axisID)
         }
-        
-        axis.value = value
         
         updateFont()
         updated?(uiFont)
@@ -96,6 +93,20 @@ open class VFont {
     
     // MARK: Private Functions
     
+    private func _setValue(_ value: CGFloat, axisID: Int) {
+        guard let axis = axes[axisID] else {
+            print("This axis with '\(axisID)' id doesn't exist")
+            return
+        }
+        
+        guard value >= axis.minValue, value <= axis.maxValue else {
+            print("You are trying to set a not allowed value \(value). Min value can be \(axis.minValue). Max value can be \(axis.maxValue)")
+            return
+        }
+        
+        axis.value = value
+    }
+    
     private func updateFont() {
         var variations = [Int: Any]()
         
@@ -104,15 +115,9 @@ open class VFont {
         }
         
         let key = kCTFontVariationAttribute as UIFontDescriptor.AttributeName
-        
         let uiFontDescriptor = UIFontDescriptor(fontAttributes: [.name: variableFontName, key: variations])
+        
         uiFont = UIFont(descriptor: uiFontDescriptor, size: uiFont.pointSize)
-        
-        let originalCTFontDescriptor = CTFontCopyFontDescriptor(ctFont) as CTFontDescriptor
-        let ctFontAttributes = [key: variations] as CFDictionary
-        
-        let ctFontDescriptor = CTFontDescriptorCreateCopyWithAttributes(originalCTFontDescriptor, ctFontAttributes)
-        ctFont = CTFont(ctFontDescriptor, size: size)
     }
     
 }
@@ -124,23 +129,23 @@ public extension Font {
     
     static func vFont(_ name: String, size: CGFloat, axisID: Int, value: CGFloat) -> Font {
         let vFont = VFont(name: name, size: size)
-        vFont?.setValue(value, axisID: axisID)
+        vFont?.setValue(value, forAxisID: axisID)
         
-        let ctFont = vFont?.ctFont ?? CTFontCreateUIFontForLanguage(.system, size, nil)!
+        let uiFont = vFont?.uiFont ?? .systemFont(ofSize: size)
         
-        return Font(ctFont)
+        return Font(uiFont)
     }
     
     static func vFont(_ name: String, size: CGFloat, axes: [Int: CGFloat] = [:]) -> Font {
         let vFont = VFont(name: name, size: size)
         
         axes.forEach { axisID, value in
-            vFont?.setValue(value, axisID: axisID)
+            vFont?.setValue(value, forAxisID: axisID)
         }
         
-        let ctFont = vFont?.ctFont ?? CTFontCreateUIFontForLanguage(.system, size, nil)!
+        let uiFont = vFont?.uiFont ?? .systemFont(ofSize: size)
         
-        return Font(ctFont)
+        return Font(uiFont)
     }
     
 }
