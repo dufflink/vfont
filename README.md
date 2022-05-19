@@ -47,31 +47,6 @@ let newUIFont = UIFont(descriptor: uiFontDescriptor, size: uiFont.pointSize)
 // Now, you can apply the UIFont object for UI text elements
 // Here you can notice, the name of the new UIFont object has been changed to 'MartianMono-Regular_wght2580000_wdth640000'
 ```
-<details>
-  <summary>Font information [System format]</summary>
-  
-  ```swift
-let variationAxes = CTFontCopyVariationAxes(ctFont) as! [Any]
-print(variationAxes)
-
-/*
-[{
-    NSCTVariationAxisDefaultValue = 400;
-    NSCTVariationAxisIdentifier = 2003265652;
-    NSCTVariationAxisMaximumValue = 800;
-    NSCTVariationAxisMinimumValue = 100;
-    NSCTVariationAxisName = Weight;
-}, {
-    NSCTVariationAxisDefaultValue = "112.5";
-    NSCTVariationAxisIdentifier = 2003072104;
-    NSCTVariationAxisMaximumValue = "112.5";
-    NSCTVariationAxisMinimumValue = 75;
-    NSCTVariationAxisName = Width;
-}]
-*/
-```
-</details>
-
 If you want to continue changing the current font object or you'd like to create more complex logic, you need to store the `UIFont` object. Moreover, you should parse the variation axes values and store them too. Don't worry, `VFont` will do it for you!
 
 ### VFont library
@@ -80,45 +55,16 @@ If you want to continue changing the current font object or you'd like to create
 import VFont
 
 let vFont = VFont(name: "Martian Mono", size: 16)! // UIFont like initialization
-vFont.getAxesDescription() // get the font information with human readable format if you need it
+vFont.getAxesDescription() // get the font information with human readable format, if you need it ✅
 
 vFont.setValue(400, forAxisID: 2003265652) // setting a new value for 'Weight' axis
 vFont.setValues(forAxes: [2003265652: 400, 2003072104: 90]) // multiple setting
 
 // Override the `updated` closure to observe all font changes
 vFont.updated = { uiFont in
-    // use the 'uiFont' objetc for UI text elements
+    // use the 'uiFont' object for UI text elements
 }
 ```
-<details>
-  <summary>Font information [Convinient format]</summary>
-  
-  ```swift
-let vFontInfo = vFont.getAxesDescription()
-print(vFontInfo)
-
-/*
-Font - Martian Mono
-
-Axes:
-id: 2003265652
-name: Weight
-minValue: 100.0
-maxValue: 800.0
-defaultValue: 400.0
-value: 400.0
------
-id: 2003072104
-name: Width
-minValue: 75.0
-maxValue: 112.5
-defaultValue: 112.5
-value: 112.5
------
-*/
-```
-</details>
-
 #### SwiftUI
 ```swift
 struct ContentView: View {
