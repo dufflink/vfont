@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/Version-0.5.0-red?style=flat-square)](https://img.shields.io/badge/Version-0.5.0-red?style=flat-square)
+[![Version](https://img.shields.io/badge/Version-0.6.0-red?style=flat-square)](https://img.shields.io/badge/Version-0.6.0-red?style=flat-square)
 [![Platforms](https://img.shields.io/badge/Platforms-iOS-blue?style=flat-square)](https://img.shields.io/badge/Platforms-iOS-blue?style=flat-square)
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-compatible-orange?style=flat-square)](https://img.shields.io/badge/SwiftUI-compatible-orange?style=flat-square)
 [![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-green?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-green?style=flat-square)
@@ -25,14 +25,14 @@ If you've never heard about the variable fonts, I would recommend reading this a
 
 ## What does the library make easier?
 
-First of all, I wondered if variable fonts are supported in iOS? Nowadays, developers use the top-level `UIFont` class to work individually with Light, Regular, Medium, Bold, and other font variations. As I found out, their support has already been added in `iOS 3.2`. But it has done at a lower level in the `CTFont` class in the `CoreText` library. It takes an extra work to get to variable fonts using `CoreText` and 'UIFont'.
+First of all, I wondered if variable fonts are supported in iOS? Nowadays, developers use the top-level `UIFont` class to work individually with Light, Regular, Medium, Bold, and other font styles. As I found out, VF support has already been added in `iOS 3.2`. But it's been done at the low level in the `CTFont` class in the `CoreText` library. It leads an extra work to get to variable fonts using `CoreText` and 'UIFont'.
 
 ## Usage
 First, you need to add the custom variable font to your project. If you've never done it, I would recommend reading this [tutorial](https://sarunw.com/posts/how-to-add-custom-fonts-to-ios-app). 
 >❗️ Be aware of the font file name can be different from the actual font name! To get the correct full font name upload the font file to the [fontgauntlet.com](https://fontgauntlet.com/).
 ### Native instruments
 ```swift
-// First. You have to get the variable font information (axes names, IDs, allowed and default values). But there isn't the current axis value 🤷‍♂️
+// First. You have to get the variable font information (axes names, IDs and allowed values). But there isn't the current axis value 🤷‍♂️
 // Here you can face the problem, that custom font wasn't added to the project, was added incorrectly, or font name isn't correct
 let uiFont = UIFont(name: "Martian Mono", size: 16.0)!
 let ctFont = CTFontCreateWithName(uiFont.fontName as CFString, 16.0, nil)
@@ -41,37 +41,12 @@ let variationAxes = CTFontCopyVariationAxes(ctFont) as! [Any] // font informatio
 // To set new values you need to know correct axis IDs and allowed values (maxValue and minValue)
 let variations = [ 2003265652: 600, 2003072104: 100] // 2003265652 - 'Weight'; 2003072104 - `Width`
 
-// As we know, text elements in UIKit use UIFont class. So, you have to create new UIFont object with new values for axes.
+// As we know, text elements in UIKit use the UIFont class. So, you have to create new UIFont object with new values for axes.
 let uiFontDescriptor = UIFontDescriptor(fontAttributes: [.name: uiFont.fontName, kCTFontVariationAttribute as UIFontDescriptor.AttributeName: variations])
 let newUIFont = UIFont(descriptor: uiFontDescriptor, size: uiFont.pointSize) 
 // Now, you can apply the UIFont object for UI text elements
 // Here you can notice, the name of the new UIFont object has been changed to 'MartianMono-Regular_wght2580000_wdth640000'
 ```
-<details>
-  <summary>Font information [System format]</summary>
-  
-  ```swift
-let variationAxes = CTFontCopyVariationAxes(ctFont) as! [Any]
-print(variationAxes)
-
-/*
-[{
-    NSCTVariationAxisDefaultValue = 400;
-    NSCTVariationAxisIdentifier = 2003265652;
-    NSCTVariationAxisMaximumValue = 800;
-    NSCTVariationAxisMinimumValue = 100;
-    NSCTVariationAxisName = Weight;
-}, {
-    NSCTVariationAxisDefaultValue = "112.5";
-    NSCTVariationAxisIdentifier = 2003072104;
-    NSCTVariationAxisMaximumValue = "112.5";
-    NSCTVariationAxisMinimumValue = 75;
-    NSCTVariationAxisName = Width;
-}]
-*/
-```
-</details>
-
 If you want to continue changing the current font object or you'd like to create more complex logic, you need to store the `UIFont` object. Moreover, you should parse the variation axes values and store them too. Don't worry, `VFont` will do it for you!
 
 ### VFont library
@@ -80,60 +55,37 @@ If you want to continue changing the current font object or you'd like to create
 import VFont
 
 let vFont = VFont(name: "Martian Mono", size: 16)! // UIFont like initialization
+vFont.getAxesDescription() // get the font information with human readable format, if you need it ✅
 
-vFont.getAxesDescription() // get the font information with human readable format if you need it
-vFont.setValue(400, axisID: 2003265652) // seeting a new value for 'Weight' axis
+vFont.setValue(400, forAxisID: 2003265652) // setting a new value for 'Weight' axis
+vFont.setValues(forAxes: [2003265652: 400, 2003072104: 90]) // multiple setting
 
 // Override the `updated` closure to observe all font changes
 vFont.updated = { uiFont in
-    // use the 'uiFont' objetc for UI text elements
+    // use the 'uiFont' object for UI text elements
 }
 ```
-<details>
-  <summary>Font information [Convinient format]</summary>
-  
-  ```swift
-let vFontInfo = vFont.getAxesDescription()
-print(vFontInfo)
-
-/*
-Font - Martian Mono
-
-Axes:
-id: 2003265652
-name: Weight
-minValue: 100.0
-maxValue: 800.0
-defaultValue: 400.0
-value: 400.0
------
-id: 2003072104
-name: Width
-minValue: 75.0
-maxValue: 112.5
-defaultValue: 112.5
-value: 112.5
------
-*/
-```
-</details>
-
 #### SwiftUI
 ```swift
-VStack {
-  Text("Title 1")
-      .font(.vFont("Martian Mono", size: 16, axisID: 2003265652, value: 450))
-  // or
-  Text("Title 2")
-      .font(.vFont("Inter", size: 32, axes: [2003072104: 80, 2003265652: 490])
+struct ContentView: View {
+
+    var body: some View {
+       Text("Title 1")
+          .font(.vFont("Martian Mono", size: 16, axisID: 2003265652, value: 450))
+       Text("Title 2")
+           .font(.vFont("Inter", size: 32, axes: [2003072104: 80, 2003265652: 490])
+    }
+    
 }
 ```
+> Why do we use number IDs instead of axis names? Good question! But the answer is really simple. The `CTFont` framework which works with the variable fonts under the hood returns different axis names for different system languages. It means that only the axis number IDs are unique values. If you find the way how to receive English names regardless of system language, I will appreciate this!
+
 ## Installation
 ### Swift Package Manager
 
 - `File` > `Swift Packages` > `Add Package Dependency`
 - Search `https://github.com/dufflink/vfont`
-- Select `Up to Next Major` with `0.5.0`
+- Select `Up to Next Major` with `0.6.0`
 
 ### Cocoapods
 
@@ -204,8 +156,6 @@ struct ContentView: View {
     
 }
 ```
-> Why do we use number IDs instead of axis names? Good question! But the answer is really simple. The `CTFont` framework which works with the variable fonts under the hood returns different axis names for different system languages. It means that only the axis number IDs are unique values. If you find the way how to receive English names regardless of system language, I will appreciate this!
-
 ## Roadmap
 - Next step is creating a script which will parse the `Info.plist` file and will generate the font classes for UIKit and the extensions for SwiftUI automatically. The generated code are going to have the same structure like in the [Font class](https://github.com/dufflink/vfont/edit/master/README.md#font-class) section abowe.
 
