@@ -61,7 +61,8 @@ vFont.setValue(400, forAxisID: 2003265652) // setting a new value for 'Weight' a
 
 let label = UILabel()
 label.font = vFont.uiFont // apply the variable font for an UI text element
-
+```
+```swift
 vFont.getAxesDescription() // get the font information with human readable format, if you need it ✅
 
 // Override the `updated` closure to observe all font changes, if you are going to change it in runtime
