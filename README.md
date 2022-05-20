@@ -39,7 +39,7 @@ let ctFont = CTFontCreateWithName(uiFont.fontName as CFString, 16.0, nil)
 let variationAxes = CTFontCopyVariationAxes(ctFont) as! [Any] // font information with weird format 👎
 
 // To set new values you need to know correct axis IDs and allowed values (maxValue and minValue)
-let variations = [ 2003265652: 600, 2003072104: 100] // 2003265652 - 'Weight'; 2003072104 - `Width`
+let variations = [2003265652: 600, 2003072104: 100] // 2003265652 - 'Weight'; 2003072104 - `Width`
 
 // As we know, text elements in UIKit use the UIFont class. So, you have to create new UIFont object with new values for axes.
 let uiFontDescriptor = UIFontDescriptor(fontAttributes: [.name: uiFont.fontName, kCTFontVariationAttribute as UIFontDescriptor.AttributeName: variations])
