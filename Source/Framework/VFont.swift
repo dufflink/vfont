@@ -99,11 +99,6 @@ open class VFont {
             return
         }
         
-        guard value >= axis.minValue, value <= axis.maxValue else {
-            print("You are trying to set a not allowed value \(value). Min value can be \(axis.minValue). Max value can be \(axis.maxValue)")
-            return
-        }
-        
         axis.value = value
     }
     
@@ -132,19 +127,14 @@ public extension Font {
         vFont?.setValue(value, forAxisID: axisID)
         
         let uiFont = vFont?.uiFont ?? .systemFont(ofSize: size)
-        
         return Font(uiFont)
     }
     
     static func vFont(_ name: String, size: CGFloat, axes: [Int: CGFloat] = [:]) -> Font {
         let vFont = VFont(name: name, size: size)
-        
-        axes.forEach { axisID, value in
-            vFont?.setValue(value, forAxisID: axisID)
-        }
+        vFont?.setValues(forAxes: axes)
         
         let uiFont = vFont?.uiFont ?? .systemFont(ofSize: size)
-        
         return Font(uiFont)
     }
     
