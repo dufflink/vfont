@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/Version-0.6.0-red?style=flat-square)](https://img.shields.io/badge/Version-0.6.0-red?style=flat-square)
+[![Version](https://img.shields.io/badge/Version-0.6.1-red?style=flat-square)](https://img.shields.io/badge/Version-0.6.1-red?style=flat-square)
 [![Platforms](https://img.shields.io/badge/Platforms-iOS-blue?style=flat-square)](https://img.shields.io/badge/Platforms-iOS-blue?style=flat-square)
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-compatible-orange?style=flat-square)](https://img.shields.io/badge/SwiftUI-compatible-orange?style=flat-square)
 [![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-green?style=flat-square)](https://img.shields.io/badge/Swift_Package_Manager-compatible-green?style=flat-square)
@@ -89,7 +89,7 @@ struct ContentView: View {
 
 - `File` > `Swift Packages` > `Add Package Dependency`
 - Search `https://github.com/dufflink/vfont`
-- Select `Up to Next Major` with `0.6.0`
+- Select `Up to Next Major` with `0.6.1`
 
 ### Cocoapods
 
