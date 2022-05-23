@@ -25,7 +25,7 @@ If you've never heard about variable fonts, I'd recommend reading this article [
 
 ## What does the library make easier?
 
-First of all, I wondered if variable fonts are supported in iOS. Nowadays, developers use the top-level `UIFont` class to work individually with Light, Regular, Medium, Bold, and other font styles. I discovered that VF support had already been added in `iOS 3.2`. However, it was done at the low level in the `CTFont` class in the `CoreText` library. This leads to extra work in order to get to variable fonts using `CoreText` and 'UIFont'.
+First of all, I wondered if variable fonts are supported in iOS. Nowadays, developers use the top-level `UIFont` class to work individually with Light, Regular, Medium, Bold, and other font styles. I discovered that VF support had already been added in `iOS 3.2`. However, it was implemented using low level code in the `CTFont` class in the `CoreText` library. This leads to extra work in order to get to variable fonts using `CoreText` and 'UIFont'.
 
 ## Usage
 First, you need to add the custom variable font to your project. If you've never done this, I recommend reading this [tutorial](https://sarunw.com/posts/how-to-add-custom-fonts-to-ios-app). 
