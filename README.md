@@ -5,23 +5,22 @@
 [![Cocoapods](https://img.shields.io/badge/Cocoapods-compatible-green?style=flat-square)](https://img.shields.io/badge/Cocoapods-compatible-green?style=flat-square)
 
 # VFont
+<img width="250" height="100" src="https://user-images.githubusercontent.com/29461219/169861446-8ec49484-0fd5-40ea-a4fd-b255d6da9eca.gif"/>
 
 <img align="right" height="160" width="160"
-     title="AnyCable logo" src="https://user-images.githubusercontent.com/29461219/168282928-cd6bd7ea-12e0-4572-8a8b-2b65538edb03.svg">
+     title="VFont logo" src="https://user-images.githubusercontent.com/29461219/168282928-cd6bd7ea-12e0-4572-8a8b-2b65538edb03.svg">
 
 `VFont` is a brilliant library which simplifies working with variable fonts in iOS projects. 
 
 If you've never heard about variable fonts, I'd recommend reading this article [Variable fonts in real life: how to use and love them](https://evilmartians.com/chronicles/variable-fonts-in-real-life-how-to-use-and-love-them) by [@romashamin](https://github.com/romashamin)
-
-[[Demo app video](https://user-images.githubusercontent.com/29461219/167891461-f3c9a035-9d36-4e93-8a47-0a02ed1b0007.mp4)]
 
 <a href="https://evilmartians.com/">
   <img
     src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
     alt="Sponsored by Evil Martians"
     width="236"
-    height="54"
-/> </a>
+    height="54"/> 
+</a>
 
 ## What does the library make easier?
 
@@ -161,6 +160,11 @@ struct ContentView: View {
     
 }
 ```
+## Examples
+Go to [Examples] folder and research how does it work! Also, you can lanch the examples in Xcode. To complete this, clone the repository and launch the `VFont.xcworkspace` file.
+
+https://user-images.githubusercontent.com/29461219/167891461-f3c9a035-9d36-4e93-8a47-0a02ed1b0007.mp4
+
 ## Roadmap
 - The next step is creating a script that will parse the `Info.plist` file and which will automatically generate the font classes for UIKit and the extensions for SwiftUI. The generated code will have the same structure as in the [Font class](https://github.com/dufflink/vfont/edit/master/README.md#font-class) section abowe.
 
