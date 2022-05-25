@@ -161,7 +161,7 @@ struct ContentView: View {
 }
 ```
 ## Examples
-Go to [Examples] folder and research how does it work! Also, you can lanch the examples in Xcode. To complete this, clone the repository and launch the `VFont.xcworkspace` file.
+Move on to [Examples](https://github.com/dufflink/vfont/tree/master/Example) and research how does it work! Also, you can lanch the examples in Xcode. To complete this, clone the repository and launch the `VFont.xcworkspace` file.
 
 https://user-images.githubusercontent.com/29461219/167891461-f3c9a035-9d36-4e93-8a47-0a02ed1b0007.mp4
 
