@@ -5,7 +5,7 @@
 [![Cocoapods](https://img.shields.io/badge/Cocoapods-compatible-green?style=flat-square)](https://img.shields.io/badge/Cocoapods-compatible-green?style=flat-square)
 
 # VFont
-<img width="250" height="100" src="https://user-images.githubusercontent.com/29461219/169861446-8ec49484-0fd5-40ea-a4fd-b255d6da9eca.gif"/>
+<img width="200" height="130" src="https://user-images.githubusercontent.com/29461219/170474103-3bc01bce-56eb-487d-867d-79c31296c885.gif"/>
 
 <img align="right" height="160" width="160"
      title="VFont logo" src="https://user-images.githubusercontent.com/29461219/168282928-cd6bd7ea-12e0-4572-8a8b-2b65538edb03.svg">
