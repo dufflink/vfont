@@ -142,7 +142,7 @@ In a `SwiftUI` project you can create `static method` as a `Font` structure exte
 extension Font {
     
     static func martianMono(size: CGFloat, width: CGFloat = 0, weight: CGFloat = 0) -> Font {
-        return Font.vFont("Martian Mono", size: size, axes: [
+        return .vFont("Martian Mono", size: size, axes: [
             2003072104: width,
             2003265652: weight
         ])
