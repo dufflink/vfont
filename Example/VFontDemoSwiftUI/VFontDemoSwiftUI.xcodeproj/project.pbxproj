@@ -14,6 +14,7 @@
 		B06F8959282BBC330052C7A7 /* Martian Mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B06F8958282BBC300052C7A7 /* Martian Mono.ttf */; };
 		B0BE5049282BBDFD007FE9FB /* VFont.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE5048282BBDFD007FE9FB /* VFont.framework */; };
 		B0BE504A282BBDFD007FE9FB /* VFont.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0BE5048282BBDFD007FE9FB /* VFont.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0E75FB928476B5B00D7E903 /* DarkModeSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E75FB828476B5B00D7E903 /* DarkModeSwitcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		B06F8958282BBC300052C7A7 /* Martian Mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Martian Mono.ttf"; sourceTree = "<group>"; };
 		B06F8963282BBC740052C7A7 /* VFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BE5048282BBDFD007FE9FB /* VFont.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VFont.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0E75FB828476B5B00D7E903 /* DarkModeSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B01DBCFA2848CC5900BFBD55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0E75FB828476B5B00D7E903 /* DarkModeSwitcher.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B06F893C282BBBCC0052C7A7 = {
 			isa = PBXGroup;
 			children = (
+				B01DBCFA2848CC5900BFBD55 /* Views */,
 				B06F8958282BBC300052C7A7 /* Martian Mono.ttf */,
 				B06F8956282BBC290052C7A7 /* Info.plist */,
 				B06F8948282BBBCC0052C7A7 /* VFontDemoSwiftUIApp.swift */,
@@ -166,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B06F894B282BBBCC0052C7A7 /* ContentView.swift in Sources */,
+				B0E75FB928476B5B00D7E903 /* DarkModeSwitcher.swift in Sources */,
 				B06F8949282BBBCC0052C7A7 /* VFontDemoSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
