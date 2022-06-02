@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01DBCFC2848CCE700BFBD55 /* LargeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01DBCFB2848CCE700BFBD55 /* LargeTitleView.swift */; };
+		B01DBCFF2848CEAF00BFBD55 /* OrientationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01DBCFE2848CEAF00BFBD55 /* OrientationInfo.swift */; };
 		B06F8949282BBBCC0052C7A7 /* VFontDemoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06F8948282BBBCC0052C7A7 /* VFontDemoSwiftUIApp.swift */; };
 		B06F894B282BBBCC0052C7A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06F894A282BBBCC0052C7A7 /* ContentView.swift */; };
 		B06F894D282BBBCD0052C7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B06F894C282BBBCD0052C7A7 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B01DBCFB2848CCE700BFBD55 /* LargeTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTitleView.swift; sourceTree = "<group>"; };
+		B01DBCFE2848CEAF00BFBD55 /* OrientationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationInfo.swift; sourceTree = "<group>"; };
 		B06F8945282BBBCC0052C7A7 /* VFontDemoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VFontDemoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06F8948282BBBCC0052C7A7 /* VFontDemoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFontDemoSwiftUIApp.swift; sourceTree = "<group>"; };
 		B06F894A282BBBCC0052C7A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,9 +63,19 @@
 		B01DBCFA2848CC5900BFBD55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B01DBCFD2848CE8C00BFBD55 /* LargeTitle View */,
 				B0E75FB828476B5B00D7E903 /* DarkModeSwitcher.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B01DBCFD2848CE8C00BFBD55 /* LargeTitle View */ = {
+			isa = PBXGroup;
+			children = (
+				B01DBCFB2848CCE700BFBD55 /* LargeTitleView.swift */,
+				B01DBCFE2848CEAF00BFBD55 /* OrientationInfo.swift */,
+			);
+			path = "LargeTitle View";
 			sourceTree = "<group>";
 		};
 		B06F893C282BBBCC0052C7A7 = {
@@ -179,6 +193,8 @@
 				B06F894B282BBBCC0052C7A7 /* ContentView.swift in Sources */,
 				B0E75FB928476B5B00D7E903 /* DarkModeSwitcher.swift in Sources */,
 				B06F8949282BBBCC0052C7A7 /* VFontDemoSwiftUIApp.swift in Sources */,
+				B01DBCFC2848CCE700BFBD55 /* LargeTitleView.swift in Sources */,
+				B01DBCFF2848CEAF00BFBD55 /* OrientationInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
