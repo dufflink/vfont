@@ -96,7 +96,7 @@ struct ContentView: View {
 To integrate `VFont` to your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'Vfont'
+pod 'VFont'
 ```
 
 ## Advanced usage
